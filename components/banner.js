@@ -5,7 +5,7 @@ const Banner = () => {
         <img src="./logo.png" alt="logo" />
       </div>
       <div>
-        Providing houses all over the world!sfs    test
+        Providing houses all over the world!sfs    testing commit
 
       </div>
     </header>
