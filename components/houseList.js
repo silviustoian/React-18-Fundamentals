@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import HouseRow, { HouseRowMem } from "./houseRow";
+import AddHouse from "./addHouse";
 
 const HouseList = () => {
   const [houses, setHouses] = useState([]);
@@ -13,17 +14,7 @@ const HouseList = () => {
     fetchHouses();
   }, []);
 
-  const addHouse = () => {
-    setHouses([
-      ...houses,
-      {
-        id: 3,
-        address: "32 Valley Way, New York",
-        country: "USA",
-        price: 1000000,
-      },
-    ]);
-  };
+
   return (
     <>
       <div className="row mb-2">
@@ -45,9 +36,7 @@ const HouseList = () => {
           ))}
         </tbody>
       </table>
-      <button className="btn btn-primary" onClick={addHouse}>
-        Add{" "}
-      </button>
+      <AddHouse setHouses={setHouses}/>
     </>
   );
 };
